@@ -41,6 +41,7 @@ import org.apache.hadoop.mapred.JobStatus;
 import org.apache.hadoop.mapred.RunningJob;
 import org.sleuthkit.web.sampleapp.client.SampleService;
 
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
