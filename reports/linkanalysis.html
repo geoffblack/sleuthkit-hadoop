@@ -124,9 +124,9 @@ limitations under the License.
     }
     var items = [];
 	items.push('<colgroup><col /><col /><col /><col /><col /></colgroup>');
-    items.push('<thead><tr><th>Sel</th><th>Device</th><th>Device ID</th><th>Score</th><th>Confidence</th></tr></thead>');
+    items.push('<thead><tr><th>Sel</th><th>Device ID</th><th>Score</th><th>Confidence</th></tr></thead>');
     items.push('<tbody></tbody>');
-    items.push('<tfoot><tr><th colspan=5 style="text-align: left;"></th></tr></tfoot>');
+    items.push('<tfoot><tr><th colspan=4 style="text-align: left;"></th></tr></tfoot>');
     $('<table>', {
       'class': 'display',
       'id' : 'dTableLinks',
@@ -187,10 +187,10 @@ limitations under the License.
                 return "<input type='checkbox' name='c" + oObj.iDataRow + "' id='c" + oObj.iDataRow + "' value='1'/>";
             }
         },
-        { "mDataProp": "a", "sWidth": "250px" },
-        { "mDataProp": "id", "sWidth": "250px" },
-        { "mDataProp": "iif", "sClass": "tblRight" },
-        { "mDataProp": "c", "sClass": "tblRight" }
+//        { "mDataProp": "a", "sWidth": "250px" },
+        { "mDataProp": "id", "sWidth": "350px" },
+        { "mDataProp": "iif", "sWidth": "275px", "sClass": "tblRight" },
+        { "mDataProp": "c", "sWidth": "275px", "sClass": "tblRight" }
       ],
       "fnServerData": function ( sSource, aoData, fnCallback ) {
         fnCallback(similarityScores);
