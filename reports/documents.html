@@ -117,9 +117,9 @@ limitations under the License.
     }
     var items = [];
 	items.push('<colgroup><col /><col /><col /><col /><col /></colgroup>');
-    items.push('<thead><tr><th>Sel</th><th>Cluster</th><th>File ID</th><th>Topics</th><th>File Path</th></tr></thead>');
+    items.push('<thead><tr><th>Sel</th><th>Cluster</th><th>Topics</th><th>File Path</th></tr></thead>');
     items.push('<tbody></tbody>');
-    items.push('<tfoot><tr><th colspan=5 style="text-align: left;"></th></tr></tfoot>');
+    items.push('<tfoot><tr><th colspan=4 style="text-align: left;"></th></tr></tfoot>');
     $('<table>', {
       'class': 'display',
       'id' : 'dTableDocuments',
@@ -180,15 +180,15 @@ limitations under the License.
                 return "<input type='checkbox' name='c" + oObj.iDataRow + "' id='c" + oObj.iDataRow + "' value='1'/>";
             }
         },
-        { "mDataProp": "a", "sWidth": "75px", "sClass": "tblRight" },
-        { "mDataProp": "fId", "sWidth": "120px" },
-        { "mDataProp": null,
+        { "mDataProp": "a", "sWidth": "125px", "sClass": "tblRight" },
+//        { "mDataProp": "fId", "sWidth": "120px" },
+        { "mDataProp": null, "sWidth": "475px", 
           "fnRender":
             function(oObj) {
                 return Util.findObjectByIndex(docClusterCounts, oObj.aData.a).kw;
             }
         },
-        { "mDataProp": "fP" }
+        { "mDataProp": "fP", "sWidth": "550px" }
       ],
       "fnServerData": function ( sSource, aoData, fnCallback ) {
         fnCallback(docClusters);
