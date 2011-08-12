@@ -193,7 +193,7 @@ limitations under the License.
         { "mDataProp": "c", "sWidth": "275px", "sClass": "tblRight" }
       ],
       "fnServerData": function ( sSource, aoData, fnCallback ) {
-        fnCallback(similarityScores);
+        fnCallback(similarityscores);
       },
       "bDeferRender": true,
       "bJQueryUI": true,
@@ -236,13 +236,13 @@ limitations under the License.
 
   $(document).ready(function () {
   	deviceName = Util.findObjectByName(deviceInfo, "deviceName").n;
-    deviceLinks = Util.getLinksFromScores(similarityScores, deviceName);
-    dataLen = similarityScores.length;
+    deviceLinks = Util.getLinksFromScores(similarityscores, deviceName);
+    dataLen = similarityscores.length;
   	menuLen = Util.buildMenu(menuList, 'menuContainer');
     positionMenus();
   	fillDeviceInfo(deviceInfo);
   	$("#chart1Title").html(Util.stringFormatComma(deviceLinks.links.length));
-    fillTable(similarityScores, "dataTableContent", "Device Similarity");
+    fillTable(similarityscores, "dataTableContent", "Device Similarity");
   	$("#dTableLinks").kiketable_colsizable({
   		dragMove: true,
   		dragOpacity: 0,
